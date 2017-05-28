@@ -407,3 +407,23 @@ func evalOrdreTitaOpt (input: Term, output: Term) -> Goal {
     })
 
 }
+
+//preuve que la traduction romanche_siflet_romanche retourne la texte d'origine
+/*
+-si l'ordre donné par heidi est un mot m simple c'est-à-dire n'est pas une liste, on verifie facilement qu'on a :
+m =evalOrdreHeidi=> m' =evalOrdreTita= m (exemple d'apres evalOrdreHeidi on a  "deponer =evalOrdreHeidi=> List.cons(court, List.cons(court, List.empty))"
+et d'apres evalOrdreTita, on a aussi List.cons(court, List.cons(court, List.empty)) =evalOrdreTita=> deponer)
+
+-si l'ordre est une liste . On sait que la traduction se fait element par element , donc si l'évaluation
+"élément =evalOrdreHeidi=> element1 =evalOrdreTita=> élément" est verifiée, elle l'est pour toute la liste.
+
+voici une petite illustration : si l'ordre de heidi est : L = m::pause::m1::pause::m2::pause::m3....pause::mx
+alors on a  : L =evalOrdreHeidi=> m'::pause::evalOrdreHeidi (m1::m2::m3....pause::mx) avec m =evalOrdreHeidi=> m' etc.
+on aura donc L =evalOrdreHeidi=> m'::pause::m1'::pause::m2'::pause::m3'...pause::mx'
+et  m'::pause::m1'::pause::m2'::pause::m3' ...pause::mx' =evalOrdreTita=> m ::pause::evalOrdreTita(m1'::pause::m2'::pause::m3'...pause::mx') etc.
+finalement on a : m::pause::m1::pause::m2::pause::m3...pause::mx =evalOrdreHeidi=> m'::pause::evalOrdreHeidi (m1::m2::m3..pause::mx) =evalOrdreTita=> m ::pause::evalOrdreTita(m1'::pause::m2'::pause::m3'...pause::mx')
+de meme pour chaque element de la liste par conjecture on a la liste de depart qui se reforme.
+
+*/
+
+//acceleration
