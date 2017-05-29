@@ -427,3 +427,23 @@ de meme pour chaque element de la liste par conjecture on a la liste de depart q
 */
 
 //acceleration
+/*
+evaluation: j'ai donner un exemple evaluation possible pour montrer que il y'aura un probleme de traduction, biensur il pourrait y
+en avoir d'autres evaluations (selon le decoupage).En fait j'ai preferé ne pas faire de code pour cette evaluation car un code pour une evaluation sans pause
+ne saurait couvrir toutes les possibilitées d'interpretation(sachant qu'un code doit etre deterministe) ou alors ne saurait pas
+interpreter toutes les combinaisons.
+
+romanche                                           -   siflet                                                             -romanche
+plaun-dretg-plaun-deponer-sa fermar => wheet-wheeo-wheeo-hee-wheet-wheet-wheeo-wheeo-wheeo-hee-wheet-wheeo-wheeo => sanester-deponer-sanester-sa fermar-dretg-sa fermar
+on se rend compte que le traducteur ne fonctionne pas correctement, en effet les mots ne sont plus distinguables
+et donc on peut avoir plusieurs decoupage de la meme liste c'est dire Tita peut eecuter un ordre different de celui qu'a voulu donner Heidi.
+
+
+*/
+
+//probleme
+/* Si on parle du probleme de pause alors je dirais qu'on peut avoir une infinité de
+decoupages d'une liste d'ordre donnée par heidi, donc une infinité de traduction (indeterminisme) biensur on ne
+saurait tous les lister  vu que le nombre de combinaisons d'ordre possibles est infini.
+
+*/
